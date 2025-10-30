@@ -9,6 +9,7 @@ generator.Fasder = function(opts)
             "fasder",
             "-d",
             "-R",
+            "-l",
         }
         for line in stdout:gmatch "[^\n]+" do
             table.insert(res, { label = line, id = line })
