@@ -8,7 +8,7 @@ generator.Fasder = function(opts)
         local success, stdout, stderr = wezterm.run_child_process {
             "fasder",
             "-d",
-            "-l",
+            "-R",
         }
         for line in stdout:gmatch "[^\n]+" do
             table.insert(res, { label = line, id = line })
